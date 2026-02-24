@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;800&family=Inter:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #050505;
+    color: #eaeaea;
+    font-family: 'Inter', sans-serif;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 20px; /* safe area for small screens */
+}
+
+canvas {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+}
+
+/* UI Container */
+.ui {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 800px;
+    background: rgba(10,10,10,0.5);
+    padding: 25px 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/* Titles */
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    letter-spacing: 6px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    opacity: 0.5;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Textarea */
+textarea {
+    width: 100%;
+    min-height: 180px;
+    max-height: 60vh; /* never taller than screen */
+    padding: 20px;
+    border-radius: 10px;
+    resize: vertical;
+    background: #111;
+    border: 1px solid #222;
+    color: #fff;
+    font-size: 1rem;
+    box-sizing: border-box;
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+.controls {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.controls button {
+    padding: 10px 25px;
+    background: #111;
+    border: 1px solid #333;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 8px;
+}
+
+.controls button:hover {
+    border-color: #00f0ff;
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.4);
+}
+
+/* Live typing stats */
+.live-stats {
+    margin-top: 15px;
+    opacity: 0.7;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    font-size: 0.9rem;
+}
+
+/* Cinematic full-screen archetype */
+.cinematic {
+    position: fixed;
+    inset: 0;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.8s;
+    z-index: 3;
+}
+
+.cinematic.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Archetype card */
+.archetype {
+    text-align: center;
+    max-width: 600px;
+    animation: glitch 0.5s linear 2;
+    padding: 20px;
+}
+
+.archetype h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.bars {
+    margin-bottom: 20px;
+}
+
+.bar {
+    margin: 10px 0;
+}
+
+.bar span {
+    display: block;
+    margin-bottom: 5px;
+    opacity: 0.7;
+}
+
+.meter {
+    height: 6px;
+    background: #111;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.meter div {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #00f0ff, #ff00c8);
+    transition: 1.2s;
+}
+
+.archetype p {
+    opacity: 0.85;
+    margin-bottom: 15px;
+}
+
+/* Glitch animation */
+@keyframes glitch {
+    0% { text-shadow: 3px 0 #ff00c8; }
+    50% { text-shadow: -3px 0 #00f0ff; }
+    100% { text-shadow: none; }
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    h1 { font-size: 2.5rem; }
+    .archetype h2 { font-size: 2rem; }
+}
+
+@media (max-height: 700px) {
+    textarea { min-height: 140px; max-height: 50vh; }
+    .ui { padding: 15px; }
+}

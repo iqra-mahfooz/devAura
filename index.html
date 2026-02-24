@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CODEX ∞ — Developer Archetype System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="network"></canvas>
+
+<div class="ui">
+    <h1>CODEX ∞</h1>
+    <p class="subtitle">Describe how you think. How you build. What drives you.</p>
+
+    <textarea id="input"></textarea>
+
+    <div class="controls">
+        <button id="analyze">INITIATE ANALYSIS</button>
+        <button id="clear">RESET</button>
+    </div>
+
+    <div class="live-stats">
+        <span>Typing Rhythm: <strong id="rhythm">0</strong></span>
+        <span>Intensity: <strong id="intensity">0</strong></span>
+    </div>
+</div>
+
+<div class="cinematic" id="cinematic">
+    <div class="archetype">
+        <h2 id="title"></h2>
+        <div class="bars">
+            <div class="bar"><span>Vision</span><div class="meter"><div id="visionMeter"></div></div></div>
+            <div class="bar"><span>Execution</span><div class="meter"><div id="execMeter"></div></div></div>
+            <div class="bar"><span>Creativity</span><div class="meter"><div id="creMeter"></div></div></div>
+            <div class="bar"><span>Precision</span><div class="meter"><div id="preMeter"></div></div></div>
+        </div>
+        <p id="desc"></p>
+        <button onclick="closeCinematic()">RETURN</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
