@@ -50,6 +50,7 @@ No frameworks or external JS libraries required. Fully lightweight and self-cont
 ## 📂 Project Structure
 
 DevAura/
+
 │
 
 ├── index.html # Main HTML page
@@ -91,4 +92,5 @@ https://iqra-mahfooz.github.io/devAura/
 
 **DevAura — Discover Your Developer Energy**  
 ✨ Turn your coding personality into an immersive, interactive experience.
+
 
