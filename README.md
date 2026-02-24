@@ -51,8 +51,11 @@ No frameworks or external JS libraries required. Fully lightweight and self-cont
 
 DevAura/
 │
+
 ├── index.html # Main HTML page
+
 ├── style.css # All styles and animations
+
 └── script.js # Typing analysis, particle network, cinematic reveal
 
 
@@ -82,6 +85,7 @@ DevAura/
 
 🔗 GitHub Repository:
  
+https://iqra-mahfooz.github.io/devAura/
 
 ---
 
